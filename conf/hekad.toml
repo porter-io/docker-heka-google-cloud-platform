@@ -1,0 +1,13 @@
+[Dashboard]
+type = "DashboardOutput"
+address = ":4352"
+ticker_interval = 15
+
+[TcpInput]
+address = ":5565"
+decoder = "ProtobufDecoder"
+
+[CloudLoggingOutput]
+message_matcher = 'Type == "gcloud"'
+flush_interval = 10000
+flush_count = 50
